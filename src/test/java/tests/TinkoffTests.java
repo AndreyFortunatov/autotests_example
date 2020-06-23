@@ -16,7 +16,8 @@ public class TinkoffTests extends TestBase {
     @Test
     @DisplayName("Проверка ссылки на страницу Вклады в шапке сайта")
     void clickDepositUrlInHeader() {
-        step("Открываем сайт", () -> open(tinkoffUrl));
+        step("Открываем сайт", () ->
+                open(tinkoffUrl));
 
         step ("Нажимаем на ссылку в шапке сайта страницы услуги Вклады", () ->
                 $$(byAttribute("data-qa-type", "uikit/tabsWithDroplist.item")).findBy(text("Вклады")).click()
@@ -30,7 +31,8 @@ public class TinkoffTests extends TestBase {
     @Test
     @DisplayName("Проверка ссылки на страницу Вклады в подвале сайта")
     void clickDepositUrlInFooter() {
-        step("Открываем сайт", () -> open(tinkoffUrl));
+        step("Открываем сайт", () ->
+                open(tinkoffUrl));
 
         step ("Нажимаем на ссылку в подвале сайта страницы услуги Вклады", () ->
                 $$("a[class^='footer__']").findBy(text("Вклады")).click());
